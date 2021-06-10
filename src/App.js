@@ -1,14 +1,27 @@
+import { useState } from 'react'
 import CategoryCard from './components/CategoryCard/CategoryCard'
 import Navbar from './components/Navbar/Navbar'
 import ProductCard from './components/ProductCard/ProductCard'
 import { db } from './data/db'
 
 const App = () => {
+	const [isOpen, setIsOpen] = useState(false)
+
+	const openMenu = () => {
+		setIsOpen(true)
+	}
+
 	return (
 		<div className='flex'>
-			<Navbar />
+			{/* {isOpen && <Navbar />} */}
+			<Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
 			<main>
-				<div className='flex'>
+				<section className="flex">
+					<button onClick={openMenu} className='ml-auto lg:hidden'>
+						<img src="img/icons/menu.png" alt="Menu" className='h-10' />
+					</button>
+				</section>
+				<div className='flex w-96 overflow-x-hidden'>
 					{db.courses.map(course => (
 						<ProductCard
 							key={course.id}

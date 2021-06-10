@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media screen and (max-width: 1023px) {
+	.navigation {
+		@apply fixed top-0 bottom-0 left-0 right-0 z-20 flex flex-col justify-center items-center bg-black text-white bg-opacity-80;
+	}
+
+	.hide-navbar {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.navigation {
+		@apply w-80 flex-shrink-0 p-8 h-screen;
+	}
+}
+
+
+/* nav className='navigation' */
