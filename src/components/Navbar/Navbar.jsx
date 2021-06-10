@@ -2,6 +2,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 	const closeMenu = () => {
 		setIsOpen(false)
 	}
+
 	return (
 		<nav className={isOpen ? 'navigation' : 'navigation hide-navbar'}>
 			<h1 className='text-2xl uppercase tracking-wider mb-12'>Le couteau</h1>
