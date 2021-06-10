@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 .app {
 	display: grid;
 	grid-template-columns: 100%;
