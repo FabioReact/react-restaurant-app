@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import AddCourse from "./pages/AddCourse/AddCourse";
 import CourseDetails from "./pages/CourseDetails/CourseDetails"
 import Home from "./pages/Home/Home"
 
@@ -23,6 +24,7 @@ const App = () => {
 				<Route path='/hello/12' component={() => <h1>Hello 12</h1>} />
 				<Route path='/hello' component={() => <h1>Hello world</h1>} />
 				{/* <Route path='/' exact component={Home} /> */}
+				<Route path='/add-course' component={AddCourse} />
 				<Route path='/' exact>
 					<Home />
 				</Route>
