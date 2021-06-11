@@ -25,7 +25,6 @@ const Home = () => {
 		fetch('http://localhost:4000/courses', {method: 'GET'})
 			.then(response => response.json())
 			.then(data => {
-				console.log(data)
 				setProducts(data)
 			})
 			.catch(error => {
@@ -34,7 +33,6 @@ const Home = () => {
 		fetch('http://localhost:4000/categories', {method: 'GET'})
 			.then(response => response.json())
 			.then(data => {
-				console.log(data)
 				setCategories(data)
 			})
 			.catch(error => {
